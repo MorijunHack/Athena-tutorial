@@ -16,7 +16,7 @@ async function startQuery(queryString: string): Promise<Athena.QueryExecutionId 
     const data = await athena.startQueryExecution({
         QueryString: queryString,
         ResultConfiguration: {
-            OutputLocation: 's3://athena-tester/queried'
+            OutputLocation: 's3://{作成したS3バケット}/queried'
         }
     }).promise();
 
